@@ -5,10 +5,10 @@
 #include <Windows.h>
 #include <assert.h>
 #include <time.h>
-// »ç¿ëÀÚ Á¤ÀÇÇÔ¼ö ±¸Çö
-// ¿©±â¿¡¼­ ÀÚÀ¯·Ó°Ô ¹®Á¦ Ç®ÀÌ¸¦ À§ÇÑ ÇÔ¼ö¸¦ Á¤ÀÇÇØ¼­ »ç¿ëÇÏ¸é µÊ
+// ì‚¬ìš©ì ì •ì˜í•¨ìˆ˜ êµ¬í˜„
+// ì—¬ê¸°ì—ì„œ ììœ ë¡­ê²Œ ë¬¸ì œ í’€ì´ë¥¼ ìœ„í•œ í•¨ìˆ˜ë¥¼ ì •ì˜í•´ì„œ ì‚¬ìš©í•˜ë©´ ë¨
 
-// test ÇÔ¼öµé
+// test í•¨ìˆ˜ë“¤
 void inputMat(int* matrix[], int numRows, int numCols, int mod) {
 	int i, j;
 	for (i = 0; i < numRows; i++) {
@@ -54,7 +54,7 @@ void test1()
 
 	srand(time(NULL));
 
-	printf("Çà°ú ¿­À» ÀÔ·ÂÇÏ½Ã¿À: ");
+	printf("í–‰ê³¼ ì—´ì„ ì…ë ¥í•˜ì‹œì˜¤: ");
 	scanf("%d%d", &row, &col);
 
 	matrixA = (int**)calloc(row, sizeof(int*));
@@ -333,35 +333,35 @@ void test3()
 
 
 
-	printf("\n(1) ¸®½ºÆ®ÀÇ ¸Ó¸®¿¡ ³ëµå »ğÀÔÇÏ±â! \n");
+	printf("\n(1) ë¦¬ìŠ¤íŠ¸ì˜ ë¨¸ë¦¬ì— ë…¸ë“œ ì‚½ì…í•˜ê¸°! \n");
 	insertFirstNode(L, "apple");
 	insertFirstNode(L, "banana");
 	insertFirstNode(L, "cat");
 	printList(L); 
 
-	printf("\n(2) ¸®½ºÆ®ÀÇ ²¿¸®¿¡ ³ëµå »ğÀÔÇÏ±â! \n");
+	printf("\n(2) ë¦¬ìŠ¤íŠ¸ì˜ ê¼¬ë¦¬ì— ë…¸ë“œ ì‚½ì…í•˜ê¸°! \n");
 	insertLastNode(L2, "apple");
 	insertLastNode(L2, "banana"); 
 	insertLastNode(L2, "cat");
 	printList(L2);
 	getchar();
 
-	printf("\n(3) ¸®½ºÆ®¿¡¼­ ³ëµå Å½»öÇÏ±â! \n");
+	printf("\n(3) ë¦¬ìŠ¤íŠ¸ì—ì„œ ë…¸ë“œ íƒìƒ‰í•˜ê¸°! \n");
 	p = searchNode(L, "banana");
-	if (p == NULL) printf("Ã£´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù. \n");
-	else printf("[%s]¸¦ Ã£¾Ò½À´Ï´Ù.\n", p->data);
+	if (p == NULL) printf("ì°¾ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤. \n");
+	else printf("[%s]ë¥¼ ì°¾ì•˜ìŠµë‹ˆë‹¤.\n", p->data);
 
 	insertMiddleNode(L, p, "test");
 
 	p = searchNode(L, "test");
-	if (p == NULL) printf("Ã£´Â µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù. \n");
-	else printf("[%s]¸¦ Ã£¾Ò½À´Ï´Ù.\n", p->data);
+	if (p == NULL) printf("ì°¾ëŠ” ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤. \n");
+	else printf("[%s]ë¥¼ ì°¾ì•˜ìŠµë‹ˆë‹¤.\n", p->data);
 
-	printf("\n(4) ¸®½ºÆ®¿¡¼­ Áß°£¿¡ ³ëµå »ğÀÔÇÏ±â! \n");
+	printf("\n(4) ë¦¬ìŠ¤íŠ¸ì—ì„œ ì¤‘ê°„ì— ë…¸ë“œ ì‚½ì…í•˜ê¸°! \n");
 	insertMiddleNode(L, p, "zero");
 	printList(L);
 
-	printf("\n(5) ¸®½ºÆ®¿¡ Á¤·ÄÇÏ¿© ³ëµå »ğÀÔÇÏ±â! \n");
+	printf("\n(5) ë¦¬ìŠ¤íŠ¸ì— ì •ë ¬í•˜ì—¬ ë…¸ë“œ ì‚½ì…í•˜ê¸°! \n");
 	orderedInsert(L3, "absolute");
 	orderedInsert(L3, "affine");
 	orderedInsert(L3, "attain");
@@ -370,7 +370,7 @@ void test3()
 	orderedInsert(L3, "test");
 	printList(L3);
 
-	printf("\n(6) ¸®½ºÆ®¿¡¼­ ³ëµå Å½»öÇÏ±â! \n");
+	printf("\n(6) ë¦¬ìŠ¤íŠ¸ì—ì„œ ë…¸ë“œ íƒìƒ‰í•˜ê¸°! \n");
 	p = searchNode(L3, "absolute");
 	deleteNode(L3, p);
 	printList(L3); getchar();
@@ -387,9 +387,9 @@ void test3()
 
 int main()
 {
-	//test1();		// µ¿Àû¸Ş¸ğ¸®ÇÒ´ç 3-3
-	//test2();		// ÆÄÀÏÀÔÃâ·Â 7
-	test3();		// ¿¬°á¸®½ºÆ® 2
+	//test1();		// ë™ì ë©”ëª¨ë¦¬í• ë‹¹ 3-3
+	//test2();		// íŒŒì¼ì…ì¶œë ¥ 7
+	test3();		// ì—°ê²°ë¦¬ìŠ¤íŠ¸ 2
 	return 0;
 }
 
